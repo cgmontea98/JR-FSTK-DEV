@@ -4,6 +4,7 @@ import { AnimationOne } from "./components/AnimationOne";
 import { Background } from "./components/Background";
 import { SignIn } from "./components/SignIn";
 import { Sigup } from "./components/Sigup";
+import { Nav } from "./components/Nav";
 
 function App() {
   return (
@@ -11,16 +12,16 @@ function App() {
       <Background />
       <main className="container">
         <article className="article-signIn">
-          <SignIn/>
+          <SignIn />
         </article>
         <aside className="aside-animationOne">
-          <AnimationOne className="animationOne"/>
+          <AnimationOne className="animationOne" />
         </aside>
         <article className="article-sigup">
-          <Sigup/>
+          <Sigup />
         </article>
-
       </main>
+      <Nav />
     </>
   );
 }

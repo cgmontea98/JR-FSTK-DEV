@@ -1,6 +1,13 @@
+import { ViewTask } from "./ViewTask"
+import { PendingTask } from "./PendingTask"
+import { CompletedTask } from "./CompletedTask"
 
 export const Nav = () => {
   return (
-    <div>Nav</div>
+    <>
+      <ViewTask/>
+      <PendingTask/>
+      <CompletedTask/>
+    </>
   )
 }

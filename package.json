@@ -20,6 +20,7 @@
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-icons": "^4.9.0",
+    "sweetalert2": "^11.7.10",
     "uuid4": "^2.0.3"
   },
   "devDependencies": {
