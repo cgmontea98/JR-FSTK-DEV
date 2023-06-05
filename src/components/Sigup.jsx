@@ -9,7 +9,6 @@ import { HiOutlineMail } from "react-icons/hi";
 import { FcGoogle } from "react-icons/fc";
 import { MdPassword } from "react-icons/md";
 
-
 export const Sigup = () => {
   const [validated, setValidated] = useState(false);
   const [show, setShow] = useState(false);
@@ -25,11 +24,11 @@ export const Sigup = () => {
   };
   return (
     <>
-      <Button variant="primary" onClick={handleShow} >
-        Launch
+      <Button variant="outline-info" onClick={handleShow}>
+        Sign Up
       </Button>
       <Offcanvas show={show} onHide={handleClose} placement="end">
-        <Offcanvas.Header closeButton>
+        <Offcanvas.Header>
           <Offcanvas.Title className="text-center fs-1">
             Bienvenido a nuestro sitio web :D
           </Offcanvas.Title>
@@ -77,12 +76,12 @@ export const Sigup = () => {
               />
             </Form.Group>
             <Button type="submit" variant="success">
-              Registrarme
+              Entrar
             </Button>
             <div className="text-center my-5">
               <h2 className="text-center my-3">
                 <Badge pill bg="dark" text="light">
-                  Registrate con
+                  Entra con
                 </Badge>
               </h2>
               <div className="d-flex aling-content-center justify-content-center"></div>

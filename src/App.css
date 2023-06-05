@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+.App {
+  background-image: url(https://assets9.lottiefiles.com/datafiles/csP6U2eWv5hDhkq/data.json);
+  margin: 10rem;
+  max-width: 1440px;
+  border-radius: 9px;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "signin player signup";
+}
+.signin {
+  grid-area: signin;
+}
+.player {
+  grid-area: player;
+}
+.signup {
+  grid-area: signup;
+}
+
+Button{
+  width: 100px;
+  height: 80px;
+}

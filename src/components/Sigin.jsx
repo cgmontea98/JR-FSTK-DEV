@@ -10,7 +10,6 @@ import { HiOutlineMail } from "react-icons/hi";
 import { FcGoogle } from "react-icons/fc";
 import { MdPassword } from "react-icons/md";
 
-
 export const Sigin = () => {
   const [validated, setValidated] = useState(false);
   const [show, setShow] = useState(false);
@@ -52,11 +51,11 @@ export const Sigin = () => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch
+      <Button variant="outline-success" onClick={handleShow}>
+        Sign In
       </Button>
       <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
+        <Offcanvas.Header>
           <Offcanvas.Title className="text-center fs-1">
             Bienvenido a nuestro sitio web :D
           </Offcanvas.Title>
