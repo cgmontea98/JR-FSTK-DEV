@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  
+}
+.container{
+  margin-top: 5em;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+  "article-signIn   aside-animationOne  article-sigup" ;
+}
+.article-signIn{
+  grid-area: article-signIn;
+}
+.aside-animationOne{
+  grid-area: aside-animationOne;
+}
+.article-sigup{
+  grid-area: article-sigup;
+}
+
+.btn-1,
+.btn-2{
+  width: 15em;
+  height: 5em;
+}

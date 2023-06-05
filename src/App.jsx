@@ -1,25 +1,27 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-
-import Container from "react-bootstrap/Container";
-import { Sigin } from "./components/Sigin";
+import "./App.css";
+import { AnimationOne } from "./components/AnimationOne";
+import { Background } from "./components/Background";
+import { SignIn } from "./components/SignIn";
 import { Sigup } from "./components/Sigup";
-import { Row, Col } from "bootstrap-4-react/lib/components/layout";
-
 
 function App() {
   return (
-    <Container className="text-center aling-content-center">
-     
-        <Row>
-          <Col>
-            <Sigin />
-          </Col>
-          <Col>
-            <Sigup />
-          </Col>
-        </Row>
-    
-    </Container>
+    <>
+      <Background />
+      <main className="container">
+        <article className="article-signIn">
+          <SignIn/>
+        </article>
+        <aside className="aside-animationOne">
+          <AnimationOne className="animationOne"/>
+        </aside>
+        <article className="article-sigup">
+          <Sigup/>
+        </article>
+
+      </main>
+    </>
   );
 }
 
