@@ -1,21 +1,20 @@
 import { useState } from "react";
+import "../App.css"
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Badge from "react-bootstrap/Badge";
-import { FaUserEdit } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { FcGoogle } from "react-icons/fc";
 import { MdPassword } from "react-icons/md";
 
-export const Sigin = () => {
+export const SignIn = () => {
   const [validated, setValidated] = useState(false);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -51,18 +50,18 @@ export const Sigin = () => {
 
   return (
     <>
-      <Button variant="outline-success" onClick={handleShow}>
+      <Button variant="outline-success" onClick={handleShow}  className="btn-2">
         Sign In
       </Button>
-      <Offcanvas show={show} onHide={handleClose}>
+      <Offcanvas className="fs-6" show={show} onHide={handleClose}>
         <Offcanvas.Header>
-          <Offcanvas.Title className="text-center fs-1">
+          <Offcanvas.Title className="text-center fs-3">
             Bienvenido a nuestro sitio web :D
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className="d-flex justify-content-center m-3">
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
-            <Form.Group as={Col} controlId="validationCustom01">
+            <Form.Group as={Col}  controlId="validationCustom01">
               <Form.Label>Nombre</Form.Label>
               <Form.Control
                 required
@@ -81,23 +80,6 @@ export const Sigin = () => {
                 defaultValue="Otto"
               />
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-            </Form.Group>
-            <Form.Group as={Col} controlId="validationCustomUsername">
-              <Form.Label>Usuario</Form.Label>
-              <InputGroup hasValidation>
-                <InputGroup.Text id="inputGroupPrepend">
-                  <FaUserEdit />
-                </InputGroup.Text>
-                <Form.Control
-                  type="text"
-                  placeholder="Mark123"
-                  aria-describedby="inputGroupPrepend"
-                  required
-                />
-                <Form.Control.Feedback type="invalid">
-                  Por favor, escoge un Usuario.
-                </Form.Control.Feedback>
-              </InputGroup>
             </Form.Group>
             <Form.Group as={Col} controlId="validationCustom03">
               <Form.Label>Email</Form.Label>

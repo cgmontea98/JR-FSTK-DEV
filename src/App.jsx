@@ -1,26 +1,27 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Player } from "@lottiefiles/react-lottie-player";
 import "./App.css";
-import { Sigin } from "./components/Sigin";
+import { AnimationOne } from "./components/AnimationOne";
+import { Background } from "./components/Background";
+import { SignIn } from "./components/SignIn";
 import { Sigup } from "./components/Sigup";
 
 function App() {
   return (
-    <main className="App">
-      <aside className="signin">
-        <Sigin />
-      </aside>
+    <>
+      <Background />
+      <main className="container">
+        <article className="article-signIn">
+          <SignIn/>
+        </article>
+        <aside className="aside-animationOne">
+          <AnimationOne className="animationOne"/>
+        </aside>
+        <article className="article-sigup">
+          <Sigup/>
+        </article>
 
-      <Player
-        src="https://assets2.lottiefiles.com/packages/lf20_PdkPu6L4Om.json"
-        loop
-        autoplay
-        className="player"
-      />
-      <aside className="signup">
-        <Sigup />
-      </aside>
-    </main>
+      </main>
+    </>
   );
 }
 

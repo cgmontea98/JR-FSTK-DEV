@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../App.css"
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
@@ -22,9 +23,9 @@ export const Sigup = () => {
     }
     setValidated(true);
   };
-  return (
-    <>
-      <Button variant="outline-info" onClick={handleShow}>
+ return(
+  <>
+  <Button variant="outline-warning" onClick={handleShow}  className="btn-1">
         Sign Up
       </Button>
       <Offcanvas show={show} onHide={handleClose} placement="end">
@@ -93,5 +94,5 @@ export const Sigup = () => {
         </Offcanvas.Body>
       </Offcanvas>
     </>
-  );
+ );
 };

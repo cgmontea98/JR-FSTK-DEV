@@ -1,29 +1,30 @@
 * {
   box-sizing: border-box;
+  
 }
-.App {
-  background-image: url(https://assets9.lottiefiles.com/datafiles/csP6U2eWv5hDhkq/data.json);
-  margin: 10rem;
-  max-width: 1440px;
-  border-radius: 9px;
+.container{
+  margin-top: 5em;
   display: grid;
+  justify-content: center;
   text-align: center;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "signin player signup";
+  grid-template-areas:
+  "article-signIn   aside-animationOne  article-sigup" ;
 }
-.signin {
-  grid-area: signin;
+.article-signIn{
+  grid-area: article-signIn;
 }
-.player {
-  grid-area: player;
+.aside-animationOne{
+  grid-area: aside-animationOne;
 }
-.signup {
-  grid-area: signup;
+.article-sigup{
+  grid-area: article-sigup;
 }
 
-Button{
-  width: 100px;
-  height: 80px;
+.btn-1,
+.btn-2{
+  width: 15em;
+  height: 5em;
 }
